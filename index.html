@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLM لوکال من</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="top"><h1>LLM لوکال من</h1><span class="sub">مدل distilgpt2 · کاملاً در مرورگر</span></header>
+  <main id="chat" class="chat" aria-live="polite">
+    <div class="msg ai"><div class="bubble">سلام! مدل بعد از دانلود اولیه کاملاً روی دستگاه خودت اجرا می‌شه. توجه: این مدل انگلیسی‌محور است و بهتر است متن انگلیسی بنویسی.</div></div>
+  </main>
+  <div id="typing" class="typing" hidden><span></span><span></span><span></span></div>
+  <form id="form" class="composer" onsubmit="return false">
+    <input id="input" type="text" placeholder="پیامت را بنویس…" autocomplete="off">
+    <button id="send" type="button" disabled>ارسال</button>
+  </form>
+  <footer class="status"><i id="dot" class="dot"></i><span id="statusText">در حال آماده‌سازی…</span></footer>
+</div>
+<!-- اسکریپت‌های کلاسیک (نه ماژول) تا با دابل‌کلیک روی file:// هم کار کنند -->
+<script src="vocab.js"></script>
+<script src="tokenizer.js"></script>
+<script src="generator.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
